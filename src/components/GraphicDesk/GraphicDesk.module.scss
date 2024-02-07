@@ -1,0 +1,108 @@
+.graphic-desk {
+    width: fit-content;
+
+    &__container {
+        display: flex;
+        gap: 12px;
+    }
+
+    &__content {
+        width: 25px;
+        display: flex;
+        align-self: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__bar {
+        width: 25px;
+        height: 100px;
+        background-color: #B4DDC1;
+    }
+
+    &__base {
+        width: 55px;
+        border-top: 1px solid;
+    }
+
+    &-title {
+        font-size: 15px;
+    }
+}
+
+.goals-bar {
+    height: 46px;
+    width: 25px;
+    background-color: #72BF44;
+    width: 25px;
+}
+
+
+// .bar {
+//     // transform: rotate(90deg);
+//     width: 44px;
+//     height: 0;
+//     margin-left: 16px;
+
+//     display: block;
+
+//     @media(min-width: 1500px) {
+//         // width: 115px;
+//         // margin: 15px;
+//         // margin: 0px 28px;
+
+//     }
+
+//     &-content {
+//         display: flex;
+//         height: 0px;
+//         align-items: baseline;
+//         gap: 3px;
+//         margin-left: 2px;
+//         // width: 115px;
+//     }
+
+//     &-games {
+//         height: 100px;
+//         width: 15px;
+//         background-color: #B4DDC1;
+//     }
+
+//     &-goals {
+//         height: 46px;
+//         width: 15px;
+//         background-color: #72BF44;
+//     }
+
+//     &-container {
+//         font-weight: bold;
+//         font-size: 18px;
+//         align-self: end;
+//         text-align: center;
+//     }
+
+//     &-number {
+//         // transform: rotate(-90deg);
+//         // display: inline-block;
+//     }
+
+//     &-base {
+//         border-top: 1px solid #006437;
+//         width: 42px;
+
+//         margin: 0px 0px 12px 0px;
+//     }
+
+//     &-title {
+//         font-size: 13px;
+//         // transform: rotate(-90deg);
+//         // display: inline-block;
+
+//         margin: 0px -4px 0px -6px;
+//     }
+// }
+
+
+// .title-margins {
+//     margin: 0 12px 0 11px;
+// }
