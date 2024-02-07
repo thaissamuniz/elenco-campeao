@@ -1,0 +1,15 @@
+.card-info {
+    display: flex;
+    align-items: center;
+
+    &__details {
+        position: relative;
+    }
+
+    &__seeMore {
+        top: 66px;
+        width: fit-content;
+        position: absolute;
+        left: 154px;
+    }
+}

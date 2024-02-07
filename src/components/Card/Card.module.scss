@@ -1,0 +1,17 @@
+.card {
+    border: 1px solid #B4DDC1;
+    background-color: white;
+    width: 280px;
+    display: flex;
+    border-radius: 50px 15px 15px 50px;
+    padding: 10px;
+    margin-bottom: 15px;
+    position: relative;
+
+    &-seeMore {
+        top: 77px;
+        width: fit-content;
+        position: absolute;
+        left: 252px;
+    }
+}

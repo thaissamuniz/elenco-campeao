@@ -1,0 +1,41 @@
+.graphic {
+    &-content {
+        display: flex;
+        align-items: center;
+    }
+
+    &-title {
+        margin-right: 6px;
+        font-size: 13px;
+
+        &__goals {
+            margin-right: 14px;
+        }
+    }
+
+    &-base {
+        height: 21px;
+        border-left: 1px solid #006437;
+    }
+
+    &-bar {
+        height: 15px;
+        margin-right: 4px;
+    }
+
+    &-bar__games {
+        width: 100px;
+        background-color: #B4DDC1;
+    }
+
+    &-bar__goals {
+        width: 46px;
+        height: 15px;
+        background-color: #72BF44;
+        margin-right: 4px;
+    }
+
+    &-number {
+        font-weight: bold;
+    }
+}
