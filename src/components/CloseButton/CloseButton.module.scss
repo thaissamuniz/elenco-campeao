@@ -1,0 +1,20 @@
+.close {
+    background-image: url('../../assets/icons/fechar.svg');
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    will-change: background-image;
+    transition: background-image 0.3s;
+    position: absolute;
+    right: 7px;
+    top: 8px;
+
+    @media(min-width: 1500px){
+        right: 8px;
+    }
+
+    &:hover {
+        background-image: url('../../assets/icons/fechar-hover.svg');
+    }
+}

@@ -1,0 +1,25 @@
+.button {
+    background-color: #B4DDC1;
+    color: #006437;
+    font-size: 15px;
+    width: 100px;
+    border-radius: 14px;
+    background-repeat: no-repeat;
+    background-size: 7px;
+
+    &:hover {
+        outline: auto;
+    }
+
+    &-rigth{
+        padding: 5px 28px 5px 20px;
+        background-image: url('../../assets/icons/seta-direita.svg');
+        background-position: 90% center;
+    }
+    &-left{
+        padding: 5px 20px 5px 28px;
+        background-image: url('../../assets/icons/seta-esquerda.svg');
+        background-position: 10% center;
+
+    }
+}

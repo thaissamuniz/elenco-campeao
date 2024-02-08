@@ -1,0 +1,147 @@
+.modal {
+    width: 280px;
+    height: 350px;
+    background-color: #FFFFFF;
+    border: 1px solid #B4DDC1;
+    border-radius: 50px 15px 15px 15px;
+    padding: 10px;
+    position: relative;
+
+    @media(min-width: 1500px) {
+        display: flex;
+        gap: 29px;
+        padding: 26px 21px 0 28px;
+        width: 356px;
+        height: 390px;
+        border-radius: 80px 15px 15px 15px;
+    }
+
+    &-close {
+        width: fit-content;
+        position: absolute;
+        right: 3px;
+        top: 5px;
+    }
+
+    &-header {
+        margin-bottom: 22px;
+
+        @media(min-width: 1500px) {
+            display: none;
+        }
+
+        &__desk {
+            display: none;
+
+            @media(min-width: 1500px) {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        &__box {
+            display: flex;
+        }
+    }
+
+    &-info {
+        overflow-y: scroll;
+        max-height: 230px;
+        padding: 0 16px 0px 14px;
+        position: relative;
+
+        @media(min-width: 1500px) {
+            width: 178px;
+        }
+    }
+
+    &-text {
+        height: 150px;
+        font-size: 14px;
+        letter-spacing: 0.57px;
+
+        @media(min-width: 1500px) {
+            height: 237px;
+        }
+    }
+
+    &-buttonbox {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 25px;
+        width: 258px;
+
+        @media(min-width: 1500px) {
+            width: 84%;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+
+    &-blur {
+        width: 226px;
+        height: 51px;
+        bottom: 29px;
+        background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FFFFFF 72%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    }
+
+    &-buttons {
+        background-color: #FFFFFF;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    &-desk {
+        @media(min-width: 1500px) {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+        }
+    }
+
+    &-graphic__desk{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.player-name {
+    display: none;
+    margin-bottom: 22px;
+    color: #006437;
+    font-size: 24px;
+
+    @media(min-width: 1500px) {
+        display: block;
+    }
+}
+
+.player-info {
+    overflow: scroll;
+}
+
+.blur {
+    height: 51px;
+    background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FFFFFF 72%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+    bottom: 36px;
+}
+
+.player-position {
+    margin-bottom: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #006437;
+    border-radius: 6px;
+}
