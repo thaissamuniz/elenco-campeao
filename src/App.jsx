@@ -1,10 +1,10 @@
 import './App.css'
-import Card from './components/Card'
+import Header from './components/Header'
 
 function App() {
   return (
     <>
-      <Card name={'Benjamin'} age={'25'} image={''} position={'atacante'} games={'1'} goals={'0'} />
+      <Header />
     </>
   )
 }

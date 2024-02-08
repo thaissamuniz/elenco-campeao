@@ -1,0 +1,25 @@
+.home-date {
+    align-self: baseline;
+    color: #72BF44;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 19px;
+
+    @media(min-width: 1500px) {
+        font-size: 12px;
+        color: #D5D5D5;
+    }
+}
+
+.home-introduction {
+    font-size: 14px;
+    color: #006437;
+    margin-bottom: 30px;
+
+    @media(min-width: 1500px) {
+        width: 500px;
+        font-size: 19px;
+        color: #FFFFFF;
+
+    }
+}
