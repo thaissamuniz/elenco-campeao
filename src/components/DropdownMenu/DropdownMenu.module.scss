@@ -1,0 +1,53 @@
+.dropdown {
+    cursor: pointer;
+    border: none;
+    width: 300px;
+    padding: 16px 20px;
+    letter-spacing: 0.38px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #006437;
+    font-style: italic;
+    appearance: none;
+    background: url('../../assets/icons/seta-baixo.svg') no-repeat right center;
+    background-size: 16px;
+    background-color: #B4DDC1;
+    background-origin: content-box;
+
+    &:hover {
+        outline: auto;
+    }
+
+    &-content {
+        max-width: 300px;
+        background-color: white;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease-out;
+        margin-bottom: 20px;
+
+        &__active {
+            position: absolute;
+            z-index: 1;
+            transition: max-height 0.2s;
+            max-width: 300px;
+            box-shadow: 0px 3px 6px #00000052;
+            border-radius: 4px;
+            // max-height: 300px;
+        }
+    }
+
+    &-item {
+        background-color: white;
+        padding: 16px 22px;
+        color: black;
+        font-style: normal;
+        width: 298px;
+        list-style: none;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #E0EFE5;
+        }
+    }
+}
