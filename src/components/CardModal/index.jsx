@@ -5,7 +5,7 @@ import NextPreviewButton from '../NextPreviewButton';
 import GraficDesk from '../GraphicDesk';
 import CardImage from '../CardImage';
 import { useParams } from 'react-router-dom';
-import data from '../../../libertadores-palmeiras-teste-dev.json';
+import data from '../../assets/libertadores-palmeiras-teste-dev.json';
 
 export default function CardModal() {
     let { index } = useParams();
