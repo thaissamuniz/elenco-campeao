@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'BentonSansCondensed Regular';
+    src: url('./assets/fonts/BentonSansCondensed\ Regular.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'BentonSansCondensed Black';
+    src: url('./assets/fonts/BentonSansCondensed\ Black.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'BentonSansCondensed Blackita';
+    src: url('./assets/fonts/BentonSansCondensed\ Blackita.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'BentonSansCondensed Bold';
+    src: url('./assets/fonts/BentonSansCondensed\ Bold.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'BentonSansCondensed Boldita';
+    src: url('./assets/fonts/BentonSansCondensed\ Boldita.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'BentonSansCondensed Italic';
+    src: url('./assets/fonts/BentonSansCondensed\ Italic.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'BentonSansCondensed Medium';
+    src: url('./assets/fonts/BentonSansCondensed\ Medium.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'BentonSansCondensed Mediumita';
+    src: url('./assets/fonts/BentonSansCondensed\ Mediumita.otf') format('opentype');
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: 'BentonSansCondensed Regular', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  input {
+    border: none;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }

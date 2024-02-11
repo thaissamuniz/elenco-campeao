@@ -8,6 +8,15 @@
     padding: 0px 20px 11px;
     margin-bottom: 19px;
 
+    @media(min-width: 720px) {
+        height: 355px;
+        padding: 0px 40px 22px;
+    }
+
+    @media(min-width: 980px) {
+        height: 455px;
+    }
+
     @media(min-width: 1500px) {
         height: 842px;
         padding: 0px 120px 115px;
@@ -22,21 +31,37 @@
     }
 
     &-title {
+        font-family: 'BentonSansCondensed Bold';
         color: white;
         text-transform: uppercase;
         background-color: #006437;
         letter-spacing: 0.75px;
         font-size: 30px;
         font-weight: bold;
-        width: fit-content;
-        padding: 6px 17px;
+        width: 209px;
+        padding: 5px 12px;
+
+        @media(min-width: 720px) {
+            width: 277px;
+            letter-spacing: 1.5px;
+            font-size: 40px;
+        }
+
+        @media(min-width: 980px) {
+            width: 337px;
+            letter-spacing: 1.5px;
+            font-size: 50px;
+        }
 
         @media(min-width: 1500px) {
+            width: 407px;
+            letter-spacing: 1.5px;
             font-size: 60px;
         }
     }
 
     &-subtitle {
+        font-family: 'BentonSansCondensed Regular';
         color: white;
         width: 270px;
         text-transform: uppercase;
@@ -46,7 +71,7 @@
         @media(min-width: 1500px) {
             font-size: 20px;
             color: #B4DDC1;
-            width: 359px;
+            width: 369px;
             letter-spacing: 0.5px;
             margin-bottom: 15px;
         }
