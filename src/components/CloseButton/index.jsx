@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import styles from './CloseButton.module.scss';
 export default function CloseButton() {
-    const closeCard = () => {
-        window.location = ('/');
-    }
+
     return (
-        <div className={styles.close} onClick={closeCard}></div>
+        <Link to={'/'}>
+            <div className={styles.close}></div>
+        </Link>
     )
 }

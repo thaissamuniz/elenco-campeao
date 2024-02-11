@@ -9,7 +9,6 @@
 
     @media(min-width: 1500px) {
         display: flex;
-        gap: 29px;
         padding: 26px 21px 0 28px;
         width: 356px;
         height: 390px;
@@ -34,6 +33,7 @@
             display: none;
 
             @media(min-width: 1500px) {
+                margin-right: 29px;
                 display: block;
                 text-align: center;
             }
@@ -56,11 +56,18 @@
     }
 
     &-text {
+        width: 241px;
+        color: #161615;
         height: 150px;
         font-size: 14px;
         letter-spacing: 0.57px;
+        padding-left: 11px;
 
         @media(min-width: 1500px) {
+            padding: 0;
+            font-size: 15px;
+            letter-spacing: 0.61px;
+            width: 177px;
             height: 237px;
         }
     }
@@ -114,12 +121,17 @@
     font-size: 24px;
 
     @media(min-width: 1500px) {
+        font-family: 'BentonSansCondensed Bold';
         display: block;
     }
 }
 
 .player-info {
     overflow: scroll;
+    width: 247px;
+    @media(min-width: 1500px){
+        width: 182px;
+    }
 }
 
 .blur {
@@ -127,6 +139,9 @@
     background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FFFFFF 72%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
     position: relative;
     bottom: 36px;
+    @media(min-width: 1500px){
+        width: 186px;
+    }
 }
 
 .player-position {

@@ -1,11 +1,12 @@
 .button {
+    font-family: 'BentonSansCondensed Italic';
     background-color: #B4DDC1;
     color: #006437;
     font-size: 15px;
     width: 100px;
     border-radius: 14px;
     background-repeat: no-repeat;
-    background-size: 7px;
+    background-size: 10px;
 
     &:hover {
         outline: auto;
