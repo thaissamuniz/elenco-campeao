@@ -17,11 +17,12 @@ export default function CardModal() {
         <div className={styles.modal}>
             <CloseButton />
             <div className={styles['modal-header__desk']} >
-                <div className={styles['modal-header__box']}>
-                    <CardImage image={`../src/assets/players/${player.foto}`} modalDesk />
+                <div>
+                    <div className={styles['modal-header__box']}>
+                        <CardImage image={`../src/assets/players/${player.foto}`} modalDesk />
+                    </div>
+                    <p className={styles['player-position']}><strong>{player.posicao}</strong><br />{player.idade} anos</p>
                 </div>
-                <p className={styles['player-position']}><strong>{player.posicao}</strong><br />{player.idade} anos</p>
-
                 <div className={styles['modal-graphic__desk']}>
                     <GraficDesk games={player.jogos} goals={player.gols} />
                 </div>
