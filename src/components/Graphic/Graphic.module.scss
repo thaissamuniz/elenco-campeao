@@ -9,7 +9,7 @@
         font-size: 13px;
 
         &__goals {
-            margin-right: 14px;
+            margin-right: 13px;
         }
     }
 
@@ -19,23 +19,22 @@
     }
 
     &-bar {
+        transition: width 1s ease-in-out;
         height: 15px;
         margin-right: 4px;
     }
 
     &-bar__games {
-        width: 100px;
         background-color: #B4DDC1;
     }
 
     &-bar__goals {
-        width: 46px;
         height: 15px;
         background-color: #72BF44;
         margin-right: 4px;
     }
 
     &-number {
-        font-weight: bold;
+        font-family: 'BentonSansCondensed Bold';
     }
 }
