@@ -1,6 +1,6 @@
 import Card from "../../components/Card";
 import CheckboxInput from "../../components/CheckboxInput";
-import DropdownMenuL from "../../components/DropdownMenuL";
+import DropdownMenu from "../../components/DropdownMenu";
 import Header from "../../components/Header";
 import styles from './Home.module.scss';
 import HomeText from "../../components/HomeText";
@@ -51,9 +51,9 @@ export default function Home() {
                     <div className={styles['home-introduction']}>
                         <HomeText />
                     </div>
-                    <DropdownMenuL text={'Todas as posições'} type={'positions'} onChange={setPosition} />
+                    <DropdownMenu text={'Todas as posições'} type={'positions'} onChange={setPosition} />
 
-                    <DropdownMenuL text={'Todas as idades'} onChange={setAge} />
+                    <DropdownMenu text={'Todas as idades'} onChange={setAge} />
                     <div className={styles['home-checkbox']}>
                         <CheckboxInput text={'Somente quem marcou gol'} value={'gol'} checked={selectedOption === 'gol'} onChange={setSelectedOption} />
                         <CheckboxInput text={'Somente quem jogou na final'} value={'final'} checked={selectedOption === 'final'} onChange={setSelectedOption} />
