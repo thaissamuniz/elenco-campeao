@@ -19,7 +19,7 @@ export default function DropdownMenu({ text, type, onChange }) {
     const filterType = type === 'positions' ? positions : ages;
 
     return (
-        <div>
+        <div className={styles['dropdown-box']}>
             <div className={styles.dropdown} onClick={handleOpen}>
                 <span>{value}</span>
             </div>

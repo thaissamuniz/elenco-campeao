@@ -5,9 +5,9 @@
     padding: 16px 20px;
     letter-spacing: 0.38px;
     border-radius: 5px;
+    font-family: 'BentonSansCondensed Italic';
     font-size: 15px;
     color: #006437;
-    font-style: italic;
     appearance: none;
     background: url('../../assets/icons/seta-baixo.svg') no-repeat right center;
     background-size: 16px;
@@ -16,6 +16,12 @@
 
     &:hover {
         outline: auto;
+    }
+
+    @media(min-width: 1500px) {
+        &-box {
+            height: 50px;
+        }
     }
 
     &-content {
@@ -33,7 +39,6 @@
             max-width: 300px;
             box-shadow: 0px 3px 6px #00000052;
             border-radius: 4px;
-            // max-height: 300px;
         }
     }
 
