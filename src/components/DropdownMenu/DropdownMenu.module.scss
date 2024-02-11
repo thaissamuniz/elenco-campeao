@@ -1,7 +1,6 @@
 .dropdown {
     cursor: pointer;
     border: none;
-    width: 300px;
     padding: 16px 20px;
     letter-spacing: 0.38px;
     border-radius: 5px;
@@ -24,6 +23,19 @@
         }
     }
 
+    &-box {
+        width: 100%;
+        position: relative;
+
+        @media(min-width: 720px) {
+            max-width: 571px;
+        }
+
+        @media(min-width: 1500px) {
+            max-width: 300px;
+        }
+    }
+
     &-content {
         max-width: 300px;
         background-color: white;
@@ -35,8 +47,7 @@
         &__active {
             position: absolute;
             z-index: 1;
-            transition: max-height 0.2s;
-            max-width: 300px;
+            width: 100%;
             box-shadow: 0px 3px 6px #00000052;
             border-radius: 4px;
         }
@@ -47,7 +58,6 @@
         padding: 16px 22px;
         color: black;
         font-style: normal;
-        width: 298px;
         list-style: none;
 
         &:hover {

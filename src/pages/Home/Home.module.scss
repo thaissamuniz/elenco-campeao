@@ -17,10 +17,11 @@
         }
 
         @media(min-width: 1500px) {
-            height: 80px;
+            height: auto;
             flex-direction: row;
             justify-content: center;
             gap: 20px;
+            padding-bottom: 15px;
         }
     }
 
@@ -39,7 +40,7 @@
 
         @media(min-width: 1500px) {
             flex-direction: column;
-            margin-bottom: 15px;
+            margin-bottom: 0;
             gap: 11px;
         }
     }

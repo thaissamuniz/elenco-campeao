@@ -1,7 +1,7 @@
 .container-label {
     display: block;
     position: relative;
-    padding-left: 20px;
+    padding-left: 29px;
     font-size: 12px;
     font-style: italic;
     color: #006437;
@@ -10,6 +10,7 @@
 
     @media(min-width: 1500px){
         width: 180px;
+        line-height: 18px;
     }
 
 }
@@ -57,8 +58,8 @@
 
 .container-label .checkmark::after {
     content: '';
-    left: 4px;
-    top: 0px;
+    left: 5px;
+    top: 1px;
     width: 5px;
     height: 9px;
     transform: rotate(45deg);
