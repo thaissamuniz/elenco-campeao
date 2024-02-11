@@ -11,6 +11,7 @@ export default function DropdownMenu({ text, type, onChange }) {
     const getFilterValue = (event) => {
         setValue(event.target.textContent);
         onChange && onChange(event.target.textContent);
+        setActive(false);
     };
 
     const handleOpen = () => setActive(!active);

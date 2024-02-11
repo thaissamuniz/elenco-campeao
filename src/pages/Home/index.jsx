@@ -43,6 +43,15 @@ export default function Home() {
         }
     }, [age]);
 
+
+    const filterResult = data.filter(player => {
+        const positionMatch = position === 'Todas as posições' || (player.posicao === position);
+        const ageMatch = age === 'Todas as idades' || (player.idade >= initialAge && player.idade <= finalAge);
+        const finalMatch = selectedOption === '' || (selectedOption === 'final' && (player.final === 'sim'));
+        const goalMatch = selectedOption === '' || (selectedOption === 'gol' && (player.gols > 0));
+        return positionMatch && ageMatch && (finalMatch || goalMatch);
+    })
+
     return (
         <>
             <Header />
@@ -61,24 +70,19 @@ export default function Home() {
                 </div>
                 <div className={styles['home-container'] + ' ' + styles['home-content']}>
                     {
-                        data.filter(player => {
-                            const positionMatch = position === 'Todas as posições' || (player.posicao === position);
-                            const ageMatch = age === 'Todas as idades' || (player.idade >= initialAge && player.idade <= finalAge);
-                            const finalMatch = selectedOption === '' || (selectedOption === 'final' && (player.final === 'sim'));
-                            const goalMatch = selectedOption === '' || (selectedOption === 'gol' && (player.gols > 0));
-                            return positionMatch && ageMatch && (finalMatch || goalMatch);
-                        }).map((player, index) => (
-                            <Card
-                                key={index}
-                                index={index}
-                                image={'./src/assets/players/' + player.foto}
-                                name={player.nome}
-                                position={player.posicao}
-                                age={player.idade}
-                                games={player.jogos}
-                                goals={player.gols}
-                            />
-                        ))
+                        filterResult.length === 0 ? 'Nenhum resultado para essa busca' :
+                            filterResult.map((player, index) => (
+                                <Card
+                                    key={index}
+                                    index={index}
+                                    image={'./src/assets/players/' + player.foto}
+                                    name={player.nome}
+                                    position={player.posicao}
+                                    age={player.idade}
+                                    games={player.jogos}
+                                    goals={player.gols}
+                                />
+                            ))
                     }
                 </div>
             </main>
