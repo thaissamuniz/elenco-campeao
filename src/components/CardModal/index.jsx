@@ -51,7 +51,7 @@ export default function CardModal() {
             <div className={styles['modal-header__desk']} >
                 <div>
                     <div className={styles['modal-header__box']}>
-                        <CardImage image={`../src/assets/players/${player.foto}`} modalDesk />
+                        <CardImage image={`/players/${player.foto}`} modalDesk />
                     </div>
                     <p className={styles['player-position']}><strong>{player.posicao}</strong><br />{player.idade} anos</p>
                 </div>
