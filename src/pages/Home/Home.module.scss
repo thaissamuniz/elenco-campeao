@@ -8,12 +8,10 @@
 
         @media(min-width: 720px) {
             height: 365px;
-
         }
 
         @media(min-width: 980px) {
             height: 323px;
-
         }
 
         @media(min-width: 1500px) {
@@ -51,12 +49,14 @@
         border-top: 10px solid #006437;
         background-color: #E0EFE5;
         padding-top: 17px;
+        min-height: 370px;
 
         @media(min-width: 720px) {
             display: grid;
             grid-template-columns: auto auto;
             justify-content: center;
             column-gap: 20px;
+            align-items: initial;
         }
 
         @media(min-width: 1200px){
@@ -65,9 +65,10 @@
         }
 
         @media(min-width: 1500px) {
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: 280px 280px 280px 280px;
             padding-top: 50px;
             padding-bottom: 44px;
+            min-height: 470px;
         }
     }
 }
