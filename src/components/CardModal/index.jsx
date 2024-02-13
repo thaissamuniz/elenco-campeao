@@ -5,16 +5,28 @@ import NextPreviewButton from '../NextPreviewButton';
 import GraficDesk from '../GraphicDesk';
 import CardImage from '../CardImage';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import data from '../../assets/libertadores-palmeiras-teste-dev.json';
-import { useEffect } from 'react';
+// import data from '../../assets/libertadores-palmeiras-teste-dev.json';
+import { useEffect, useState } from 'react';
+import getPlayers from '../../services/player-service';
+const defaultPlayer = { height: 0, jogos: 0, gols: 0 };
 
 
 export default function CardModal() {
     const nav = useNavigate();
     let { name } = useParams();
+    const [data, setData] = useState([defaultPlayer]);
+
+    const fetchData = async () => {
+        const jsonData = await getPlayers();
+        setData(jsonData);
+    };
 
     const index = data.findIndex(player => player.nome === name);
-    const player = data[index];
+    let player = data[index];
+
+    if (data.length === 1 && data[0].nome === undefined) {
+        player = data[0];
+    }
 
     useEffect(() => {
         if (player === undefined) {
@@ -24,8 +36,12 @@ export default function CardModal() {
 
     }, [player])
 
-    const nextIndex = (parseInt(index) + 1) < data.length ? parseInt(index) + 1 : 0;
-    const prevIndex = (parseInt(index) - 1) >= 0 ? parseInt(index) - 1 : (data.length - 1);
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const nextIndex = (index + 1) < data.length ? index + 1 : 0;
+    const prevIndex = (index - 1) >= 0 ? index - 1 : (data.length - 1);
 
     if (!player) return
 
