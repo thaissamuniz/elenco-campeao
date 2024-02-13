@@ -2,15 +2,8 @@ import { useEffect, useState } from 'react';
 import styles from './GraphicDesk.module.scss';
 
 export default function GraficDesk({ games, goals }) {
-
-    const [gamesBarHeight, setGamesBarHeight] = useState(0);
-    const [goalsBarHeight, setGoalsBarHeight] = useState(0);
-
-    useEffect(() => {
-        setGamesBarHeight((games / 13) * 100);
-        setGoalsBarHeight((goals / 6) * 46);
-
-    }, [games, goals]);
+    const gamesBarHeight = (games / 13) * 100;
+    const goalsBarHeight = (goals / 6) * 46;
 
     return (
         <div className={styles['graphic-desk']}>
