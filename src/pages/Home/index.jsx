@@ -72,7 +72,7 @@ export default function Home() {
                                 <Card
                                     key={index}
                                     index={index}
-                                    image={'./src/assets/players/' + player.foto}
+                                    image={'/players/' + player.foto}
                                     name={player.nome}
                                     position={player.posicao}
                                     age={player.idade}
