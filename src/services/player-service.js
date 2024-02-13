@@ -2,10 +2,10 @@ let cache = []
 
 export default async function getPlayers() {
     try {
-        if(cache.length) {
+        if (cache.length) {
             return cache
         }
-        const response = await fetch('src/assets/libertadores-palmeiras-teste-dev.json');
+        const response = await fetch('../../public/libertadores-palmeiras-teste-dev.json');
         const responseJson = await response.json();
         cache = responseJson;
         return cache;

@@ -10,6 +10,10 @@ const router = createBrowserRouter([
     {
         path: "/jogador/:name",
         element: <Card />
+    },
+    {
+        path: "*",
+        element: <App />
     }
 ])
 
