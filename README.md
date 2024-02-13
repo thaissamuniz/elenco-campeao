@@ -1,8 +1,28 @@
-# React + Vite
+# Elenco campeão - Desafio Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sobre
 
-Currently, two official plugins are available:
+Este projeto trata-se de um infográfico sobre o campeão da libertadores de 2021. Trás informações sobre os jogadores do time, permitindo filtrar por posição, idade, número de jogos e quantidade de gols.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Como usar
+
+O projeto pode ser acessado neste link: https://elenco-campeao.vercel.app/
+
+ou se preferir rodar o projeto localmente, faça o download do repositório e abra-o no VSCode. Na página do projeto, rode o seguinte comando no terminal:
+```
+npm install
+```
+Após isso, rode o comando:
+```
+npm run dev
+```
+O projeto deve ficar disponível no seguinte endereço:
+```
+http://localhost:5173/
+```
+
+## Tecnologias
+
+* React.js
+* React Router Dom
+* SASS
