@@ -11,7 +11,7 @@ export default function CheckboxInput({ text, value, checked, onChange }) {
     return (
         <label className={styles['container-label']}>
             {text}
-            <input type="radio" name='option' value={value} checked={checked} onClick={handleClick} />
+            <input type="radio" name='option' value={value} checked={checked} onClick={handleClick} readOnly/>
             <span className={styles.checkmark}></span>
         </label>
     )

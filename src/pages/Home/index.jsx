@@ -4,53 +4,50 @@ import DropdownMenu from "../../components/DropdownMenu";
 import Header from "../../components/Header";
 import styles from './Home.module.scss';
 import HomeText from "../../components/HomeText";
-import data from "../../assets/libertadores-palmeiras-teste-dev.json";
 import { useEffect, useState } from "react";
+import getPlayers from "../../services/player-service";
 
 export default function Home() {
     const [position, setPosition] = useState('Todas as posições');
-    const [initialAge, setInitialAge] = useState(0);
-    const [finalAge, setFinalAge] = useState(49);
     const [age, setAge] = useState('Todas as idades');
     const [selectedOption, setSelectedOption] = useState('');
+    const [data, setData] = useState([]);
 
-    useEffect(() => {
+    const getPlayerAge = (age) => {
         switch (age) {
             case 'Todas as idades':
-                setInitialAge(0);
-                setFinalAge(49);
-                break;
+                return [0, 49]
             case '0-19 anos':
-                setInitialAge(0);
-                setFinalAge(19);
-                break;
+                return [0, 19]
             case '20-29 anos':
-                setInitialAge(20);
-                setFinalAge(29);
-                break;
+                return [20, 29]
             case '30-39 anos':
-                setInitialAge(30);
-                setFinalAge(39);
-                break;
+                return [30, 39]
             case '40-49 anos':
-                setInitialAge(40);
-                setFinalAge(49);
-                break;
+                return [40, 49]
             default:
-                setInitialAge(0);
-                setFinalAge(49);
-                break;
+                return [0, 49]
         }
-    }, [age]);
+    }
 
+    const filterAge = getPlayerAge(age);
+
+    const fetchData = async () => {
+     const jsonData = await getPlayers();
+        setData(jsonData);
+    };
+
+    useEffect(() => {
+        fetchData();
+      }, []);
 
     const filterResult = data.filter(player => {
         const positionMatch = position === 'Todas as posições' || (player.posicao === position);
-        const ageMatch = age === 'Todas as idades' || (player.idade >= initialAge && player.idade <= finalAge);
+        const ageMatch = age === 'Todas as idades' || (player.idade >= filterAge[0] && player.idade <= filterAge[1]);
         const finalMatch = selectedOption === '' || (selectedOption === 'final' && (player.final === 'sim'));
         const goalMatch = selectedOption === '' || (selectedOption === 'gol' && (player.gols > 0));
         return positionMatch && ageMatch && (finalMatch || goalMatch);
-    })
+    });
 
     return (
         <>
@@ -68,7 +65,7 @@ export default function Home() {
                         <CheckboxInput text={'Somente quem jogou na final'} value={'final'} checked={selectedOption === 'final'} onChange={setSelectedOption} />
                     </div>
                 </div>
-                <div className={styles['home-container'] + ' ' + styles['home-content']}>
+                <div className={`${styles['home-container']} ${styles['home-content']}`}>
                     {
                         filterResult.length === 0 ? 'Nenhum resultado para essa busca' :
                             filterResult.map((player, index) => (
