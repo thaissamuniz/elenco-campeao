@@ -61,7 +61,7 @@ export default function CardModal() {
             </div>
 
             <div className={styles['modal-header']}>
-                <CardInfo image={`../src/assets/players/${player.foto}`} name={player.nome} age={player.idade} position={player.posicao} games={player.jogos} goals={player.gols} />
+                <CardInfo image={`/players/${player.foto}`} name={player.nome} age={player.idade} position={player.posicao} games={player.jogos} goals={player.gols} />
             </div>
             <div>
                 <p className={styles['player-name']}>{player.nome}</p>
