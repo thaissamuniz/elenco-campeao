@@ -4,14 +4,30 @@ import CloseButton from '../CloseButton';
 import NextPreviewButton from '../NextPreviewButton';
 import GraficDesk from '../GraphicDesk';
 import CardImage from '../CardImage';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import data from '../../assets/libertadores-palmeiras-teste-dev.json';
+import { useEffect } from 'react';
+
 
 export default function CardModal() {
-    let { index } = useParams();
+    const nav = useNavigate();
+    let { name } = useParams();
+
+    const index = data.findIndex(player => player.nome === name);
     const player = data[index];
-    const next = (parseInt(index) + 1) < data.length ? parseInt(index) + 1 : 0;
-    const prev = (parseInt(index) - 1) >= 0 ? parseInt(index) - 1 : (data.length - 1);
+
+    useEffect(() => {
+        if (player === undefined) {
+            nav('/')
+            return
+        }
+
+    }, [player])
+
+    const nextIndex = (parseInt(index) + 1) < data.length ? parseInt(index) + 1 : 0;
+    const prevIndex = (parseInt(index) - 1) >= 0 ? parseInt(index) - 1 : (data.length - 1);
+
+    if (!player) return
 
     return (
         <div className={styles.modal}>
@@ -41,11 +57,11 @@ export default function CardModal() {
                 <div className={styles.blur}></div>
             </div>
             <div className={styles['modal-buttonbox']}>
-                <Link to={`/card/${prev}`}>
+                <Link to={`/jogador/${data[prevIndex].nome}`}>
                     <NextPreviewButton text={'Anterior'} />
 
                 </Link>
-                <Link to={`/card/${next}`}>
+                <Link to={`/jogador/${data[nextIndex].nome}`}>
                     <NextPreviewButton text={'Próximo'} rigth />
                 </Link>
             </div>

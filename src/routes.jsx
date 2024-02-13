@@ -8,7 +8,7 @@ const router = createBrowserRouter([
         element: <App />
     },
     {
-        path: "/card/:index",
+        path: "/jogador/:name",
         element: <Card />
     }
 ])
