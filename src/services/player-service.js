@@ -5,7 +5,7 @@ export default async function getPlayers() {
         if (cache.length) {
             return cache
         }
-        const response = await fetch('../../public/libertadores-palmeiras-teste-dev.json');
+        const response = await fetch('/libertadores-palmeiras-teste-dev.json');
         const responseJson = await response.json();
         cache = responseJson;
         return cache;
